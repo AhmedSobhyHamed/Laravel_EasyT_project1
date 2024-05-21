@@ -30,15 +30,15 @@ and there is a form for login or signup the user.
 
 ## Features
 
-```diff
-    Using MVC architicture.
-    Using Laravel Authentication system.
-    Validating users data.
-    Using ORM Laravel elequent models.
-    Using yeild-section blade approch
-    Using middleware.
-    Using fake data for testing.
-```
+    ```diff
+        Using MVC architicture.
+        Using Laravel Authentication system.
+        Validating users data.
+        Using ORM Laravel elequent models.
+        Using yeild-section blade approch
+        Using middleware.
+        Using fake data for testing.
+    ```
 
   <!-- get start and how to run with the prerequisites mintion -->
 
@@ -46,138 +46,138 @@ and there is a form for login or signup the user.
 
 1. install pre-requisies utilities
 
--   install php
-    on Ubuntu, Debian, and Linux Mint:
+    - install php
+      on Ubuntu, Debian, and Linux Mint:
 
-```sh
-sudo apt-get install php8.1 php8.1-cli php8.1-common php8.1-curl php8.1-mysql
-```
+        ```sh
+        sudo apt-get install php8.1 php8.1-cli php8.1-common php8.1-curl php8.1-mysql
+        ```
 
--   install mysql
-    on Ubuntu, Debian, and Linux Mint:
+    - install mysql
+      on Ubuntu, Debian, and Linux Mint:
 
-```sh
-sudo apt-get install mysql-client-8.0 mysql-client-core-8.0 mysql-server-core-8.0
-```
+        ```sh
+        sudo apt-get install mysql-client-8.0 mysql-client-core-8.0 mysql-server-core-8.0
+        ```
 
--   install composer
-    on Ubuntu, Debian, and Linux Mint:
+    - install composer
+      on Ubuntu, Debian, and Linux Mint:
 
-```sh
-sudo apt-get install composer
-```
+        ```sh
+        sudo apt-get install composer
+        ```
 
--   install npm
-    on Ubuntu, Debian, and Linux Mint:
+    - install npm
+      on Ubuntu, Debian, and Linux Mint:
 
-```sh
-sudo apt-get install nodejs npm
-```
+        ```sh
+        sudo apt-get install nodejs npm
+        ```
 
 2. Clone the repository:
 
-```sh
-git clone https://github.com/AhmedSobhyHamed/Laravel_EasyT_project1.git
-```
+    ```sh
+    git clone https://github.com/AhmedSobhyHamed/Laravel_EasyT_project1.git
+    ```
 
 3. Navigate to the project directory:
 
-```sh
-cd work_directory
-```
+    ```sh
+    cd work_directory
+    ```
 
 4. Install dependencies:
 
--   laravel dependencies
+    - laravel dependencies
 
-```sh
-compose install
-```
+        ```sh
+        compose install
+        ```
 
--   node dependencies
+    - node dependencies
 
-```sh
-npm install
-```
+        ```sh
+        npm install
+        ```
 
 5. Set up environment variables:
 
-```sh
-cp .env.example .env
-```
+    ```sh
+    cp .env.example .env
+    ```
 
 6. Link storage to public folder:
 
-```sh
-php artisan storage:link
-```
+    ```sh
+    php artisan storage:link
+    ```
 
 7. Create Database and User:
 
--   open mysql
+    - open mysql
 
-```sh
-sudo mysql
-```
+        ```sh
+        sudo mysql
+        ```
 
--   create database
+    - create database
 
-```sh
-CREATE DATABASE eayst-database;
-```
+        ```sh
+        CREATE DATABASE eayst-database;
+        ```
 
--   create user
+    - create user
 
-```sh
-CREATE USER IF NOT EXISTS
-'easytUser'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password'
-REQUIRE NONE
-WITH MAX_CONNECTIONS_PER_HOUR 1800 MAX_USER_CONNECTIONS 5
-PASSWORD EXPIRE NEVER FAILED_LOGIN_ATTEMPTS 5 PASSWORD REQUIRE CURRENT PASSWORD_LOCK_TIME 1;
-```
+        ```sh
+        CREATE USER IF NOT EXISTS
+        'easytUser'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password'
+        REQUIRE NONE
+        WITH MAX_CONNECTIONS_PER_HOUR 1800 MAX_USER_CONNECTIONS 5
+        PASSWORD EXPIRE NEVER FAILED_LOGIN_ATTEMPTS 5 PASSWORD REQUIRE CURRENT PASSWORD_LOCK_TIME 1;
+        ```
 
--   grant privilages
+    - grant privilages
 
-```sh
-GRANT INSERT,UPDATE,DELETE,SELECT,CREATE,DROP,ALTER,REFERENCES ON `eayst-database`.* TO 'easytUser'@'localhost';
-FLUSH PRIVILEGES;
-```
+        ```sh
+        GRANT INSERT,UPDATE,DELETE,SELECT,CREATE,DROP,ALTER,REFERENCES ON `eayst-database`.* TO 'easytUser'@'localhost';
+        FLUSH PRIVILEGES;
+        ```
 
 8. Migrate tables:
 
-```sh
-php artisan migrate
-```
+    ```sh
+    php artisan migrate
+    ```
 
 9. Adding fake data for testing perpose (optional):
 
--   open tinker
+    - open tinker
 
-```sh
-php artisan tinker
-```
+        ```sh
+        php artisan tinker
+        ```
 
--   fakeing data and use factory
+    - fakeing data and use factory
 
-```sh
-App\Models\User::factory(20)->create();
-App\Models\Follow::factory(10)->create();
-App\Models\Blog::factory(50)->create();
-App\Models\Comment::factory(80)->create();
-App\Models\Reaction::factory(80)->create();
-```
+        ```sh
+        App\Models\User::factory(20)->create();
+        App\Models\Follow::factory(10)->create();
+        App\Models\Blog::factory(50)->create();
+        App\Models\Comment::factory(80)->create();
+        App\Models\Reaction::factory(80)->create();
+        ```
 
-**careful: this action might fail, because of code typed in inproper way.**
-**do not ppanic and try the line it fail one more time**
-**fails not means its not work, but it works half the way**
+    **careful: this action might fail, because of code typed in inproper way.**
+    **do not ppanic and try the line it fail one more time**
+    **fails not means its not work, but it works half the way**
 
 10. Start the application:
 
-```sh
-php artisan serve
-```
+    ```sh
+    php artisan serve
+    ```
 
-then open the browser to the linke typed in the terminal.
+    then open the browser to the linke typed in the terminal.
 
   <!-- usage or how to interact with this technologies like api end points and what they do -->
 
@@ -192,28 +192,28 @@ then open the browser to the linke typed in the terminal.
 
 1. Register for an account or log in with existing credentials
 
-```diff
-http://localhost:8000/login
-http://localhost:8000/signup
-```
+    ```diff
+    http://localhost:8000/login
+    http://localhost:8000/signup
+    ```
 
 2. View all posts that you have access to.
 
-```diff
-http://localhost:8000/blog
-```
+    ```diff
+    http://localhost:8000/blog
+    ```
 
 3. View a spesifice post with his comments and reactions.
 
-```diff
-http://localhost:8000/blogpost/{id}
-```
+    ```diff
+    http://localhost:8000/blogpost/{id}
+    ```
 
 4. Create new post page.
 
-```diff
-http://localhost:8000/blog/create
-```
+    ```diff
+    http://localhost:8000/blog/create
+    ```
 
 ## Technologies Used
 
