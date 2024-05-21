@@ -1,6 +1,6 @@
 # Laravel_EasyT_project1
 
-A small not completed blog system, and my first Laravel project.
+A small, incomplete blog system, and my first Laravel project.
 ![](repo-image/name.png)
 
 ## Table of Contents
@@ -18,24 +18,24 @@ A small not completed blog system, and my first Laravel project.
 
 ## Introduction
 
-this project just a practicing while i learing Laravel.
+This project is just for practice while I am learning Laravel.
 <br>
-with lot of masy code and not completed futures, i created a blog system that can create and show posts for how have the permition. the permition given when the post is created. and you can upgrade users permitions by follow users each other.
+With a lot of messy code and incomplete features, I created a blog system that can create and display posts for those who have permission. Permission is granted when the post is created, and you can upgrade users' permissions by having users follow each other.
 <br>
-every post have comments section.
+Every post has a comments section.
 <br>
-and there is a form for login or signup the user.
+And there is a form for logging in or signing up the user.
 
   <!-- technologies was used with links if available -->
 
 ## Features
 
     ```diff
-        Using MVC architicture.
+        Using MVC architecture.
         Using Laravel Authentication system.
         Validating users data.
-        Using ORM Laravel elequent models.
-        Using yeild-section blade approch
+        Using ORM Laravel eloquent models.
+        Using yield-section blade approach.
         Using middleware.
         Using fake data for testing.
     ```
@@ -149,7 +149,7 @@ and there is a form for login or signup the user.
     php artisan migrate
     ```
 
-9. Adding fake data for testing perpose (optional):
+9. Adding fake data for testing purpose (optional):
 
     - open tinker
 
@@ -157,7 +157,7 @@ and there is a form for login or signup the user.
         php artisan tinker
         ```
 
-    - fakeing data and use factory
+    - faking data and use factory
 
         ```sh
         App\Models\User::factory(20)->create();
@@ -167,9 +167,11 @@ and there is a form for login or signup the user.
         App\Models\Reaction::factory(80)->create();
         ```
 
-    **careful: this action might fail, because of code typed in inproper way.**
-    **do not ppanic and try the line it fail one more time**
-    **fails not means its not work, but it works half the way**
+        **Careful: this action might fail because of improperly typed code.**
+        <br>
+        **Do not panic and try the line again if it fails once more.**
+        <br>
+        **Failure does not mean it does not work, but rather it works halfway.**
 
 10. Start the application:
 
@@ -177,7 +179,7 @@ and there is a form for login or signup the user.
     php artisan serve
     ```
 
-    then open the browser to the linke typed in the terminal.
+    Then open the browser to the link typed in the terminal.
 
   <!-- usage or how to interact with this technologies like api end points and what they do -->
 
@@ -188,7 +190,7 @@ and there is a form for login or signup the user.
 <br>
 **[see an example for user interaction.[video]](http://youtube.com)**
 
-#### interacting with end points in browser:
+#### Interacting with endpoints in the browser:
 
 1. Register for an account or log in with existing credentials
 
@@ -197,19 +199,19 @@ and there is a form for login or signup the user.
     http://localhost:8000/signup
     ```
 
-2. View all posts that you have access to.
+2. View all posts to which you have access.
 
     ```diff
     http://localhost:8000/blog
     ```
 
-3. View a spesifice post with his comments and reactions.
+3. View a specific post with its comments and reactions.
 
     ```diff
     http://localhost:8000/blogpost/{id}
     ```
 
-4. Create new post page.
+4. Go to the 'create new post' page.
 
     ```diff
     http://localhost:8000/blog/create
