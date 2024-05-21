@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/signup', [UserController::class , 'signup'])->name('signupRoute');
-Route::get('/login', [UserController::class , 'login'])->name('loginRoute');
-Route::post('authenticate',[UserController::class,'authenticate'])->name('authenticateRoute');
-Route::get('/blog', [BlogController::class,'index'])->name('blogRoute');
-Route::get('/blogpost/{id}',[BlogController::class,'show'])->name('blogpost')->where('id','[0-9]+');
-Route::get('/blog/create/new',[BlogController::class,'create'])->name('blogcreateui');
-Route::post('/blog/createblog',[BlogController::class,'store'])->name('createblog');
-
+Route::middleware('guest')->group(function () {
+    Route::get('/signup', [UserController::class, 'signup'])->name('signupRoute');
+    Route::get('/login', [UserController::class, 'login'])->name('loginRoute');
+    Route::post('authenticate', [UserController::class, 'authenticate'])->name('authenticateRoute');
+});
+Route::middleware('auth')->group(function () {
+    Route::get('/blog', [BlogController::class, 'index'])->name('blogRoute');
+    Route::get('/blogpost/{id}', [BlogController::class, 'show'])->name('blogpost')->where('id', '[0-9]+');
+    Route::get('/blog/create/new', [BlogController::class, 'create'])->name('blogcreateui');
+    Route::post('/blog/createblog', [BlogController::class, 'store'])->name('createblog');
+});

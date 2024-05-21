@@ -17,14 +17,13 @@ class AuthCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->url() === route('loginRoute') || $request->url() === route('signupRoute'))
-            if(Auth::check()) {
-                return Redirect(route('blogRoute'));
-            }
-        else
-            if(!Auth::check()) {
-                return Redirect(route('loginRoute'));
-            }
+        // if ($request->url() === route('loginRoute') || $request->url() === route('signupRoute')) {
+        //     if (Auth::check()) {
+        //         return Redirect(route('blogRoute'));
+        //     } else {
+        //         return Redirect(route('loginRoute'));
+        //     }
+        // }
         return $next($request);
     }
 }
