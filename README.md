@@ -185,9 +185,9 @@ And there is a form for logging in or signing up the user.
 
 ## Usage
 
-**You can interact with the project via this link**
-[web page on github](https://ahmedsobhyhamed.github.io/JS_PROJECTS/).
-<br>
+<!-- **You can interact with the project via this link**
+[web page on github](https://ahmedsobhyhamed.github.io/Laravel_EasyT_project1/).
+<br> -->
 **[see an example for user interaction.[video]](http://youtube.com)**
 
 #### Interacting with endpoints in the browser:
